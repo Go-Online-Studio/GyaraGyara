@@ -241,13 +241,13 @@
     const detailPage = product.isArtwork
       ? "product_description_art_work.html"
       : "product_description_vase.html";
-    return `
+    return ` 
       <article class="product-card flex flex-col relative group">
-        <button aria-label="${isWished ? "Remove from" : "Add to"} favorites" class="absolute top-3 right-3 z-10 text-on-surface-variant hover:text-red-500 transition-colors bg-white/50 rounded-full p-1.5 ${isWished ? "gg-heart-active" : ""}" data-wishlist-btn="${product.id}">
+        <button aria-label="${isWished ? "Remove from" : "Add to"} favorites" class="absolute top-6 right-6 z-10 text-on-surface-variant hover:text-red-500 transition-colors bg-white/50 rounded-full p-1.5 ${isWished ? "gg-heart-active" : ""}" data-wishlist-btn="${product.id}">
           <svg class="w-5 h-5" fill="${isWished ? "currentColor" : "none"}" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
         </button>
-        <a href="${detailPage}?slug=${product.slug}" class="aspect-[4/5] w-full bg-[#ebebed] overflow-hidden rounded-t-[7px] border-b border-brand block">
-          <img alt="${product.name}" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" loading="lazy" src="${product.image}" width="300" height="375"/>
+        <a href="${detailPage}?slug=${product.slug}" class="aspect-[4/5] !pb-0 p-2 lg:p-3 w-full bg-[#ebebed] overflow-hidden rounded-t-[7px]">
+          <img alt="${product.name}" class="w-full h-full object-cover object-center rounded-t-[7px] group-hover:scale-105 transition-transform duration-500" loading="lazy" src="${product.image}" width="300" height="375"/>
         </a>
         <div class="p-4 flex flex-col flex-grow">
           <a href="${detailPage}?slug=${product.slug}" class="text-lg text-on-surface mb-1 hover:underline">${product.name}</a>
@@ -255,9 +255,9 @@
           <div class="mt-auto flex items-center justify-between gap-2">
             <button class="btn-outline flex-1 py-1.5 px-3 text-sm font-medium tracking-wide uppercase flex justify-center items-center" data-add-cart="${product.id}">Add To Cart</button>
             <div class="btn-outline flex items-center h-full px-2 py-1.5">
-              <button class="px-2 text-brand hover:text-opacity-70" data-qty-minus="${product.id}">-</button>
-              <input class="w-6 text-center text-sm font-medium bg-transparent border-none p-0 focus:ring-0 text-brand" min="1" type="number" value="1" data-qty-input="${product.id}" aria-label="Quantity"/>
-              <button class="px-2 text-brand hover:text-opacity-70" data-qty-plus="${product.id}">+</button>
+              <button class="px-2  hover:text-opacity-70" data-qty-minus="${product.id}">-</button>
+              <input class="w-6 text-center text-sm font-medium bg-transparent border-none p-0 focus:ring-0 " min="1" type="number" value="1" data-qty-input="${product.id}" aria-label="Quantity"/>
+              <button class="px-2  hover:text-opacity-70" data-qty-plus="${product.id}">+</button>
             </div>
           </div>
         </div>

@@ -455,51 +455,77 @@
     <!-- END: More Like This -->
   </main>
 
-  <footer id="mainFooter">
-<!-- Reusable Footer Component — Injected by critical.js -->
-<div class="bg-primary text-white py-16 px-8 relative overflow-hidden" role="contentinfo">
-  <!-- Decorative background elements -->
-  <div class="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true">
-    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="footer-lines" patternUnits="userSpaceOnUse" width="100" height="100">
-          <path d="M 0 100 A 100 100 0 0 0 100 0" fill="none" stroke="white" stroke-width="1"/>
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#footer-lines)"/>
-    </svg>
-  </div>
-  <div class="max-w-4xl mx-auto relative z-10 text-center">
-    <h3 class="text-2xl mb-2 font-medium">How can we help?</h3>
-    <p class="text-xl mb-12 text-gray-300">contact us anytime</p>
-    <div class="space-y-4 mb-24">
-      <p>Contact us on : <a href="tel:+918156087656" class="hover:text-gray-300 transition-colors">+91 8156087656</a></p>
-      <p><a href="mailto:hello11.11india@gmail.com" class="hover:text-gray-300 transition-colors">hello11.11india@gmail.com</a></p>
+  <footer id="mainFooter" class="overflow-hidden relative">
+
+    <div
+      class="absolute left-0 bottom-0 translate-y-[34%] translate-x-[-30%] flex items-end gap-[2vw] opacity-80 pointer-events-none select-none z-10">
+      <img src="images/FooterGraphic1.svg" alt="" aria-hidden="true" class="h-[75vh] md:h-[90vh] w-auto shrink-0" />
+
+      <img src="images/FooterGraphic2.svg" alt="" aria-hidden="true" class="h-[50vh] md:h-[60vh] w-auto shrink-0" />
     </div>
-    <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 border-t border-white/20 pt-8">
-      <a class="hover:text-white mb-4 md:mb-0 transition-colors" href="#">Terms and Condition</a>
-      <div class="flex items-center gap-4">
-        <span>Follow Us</span>
-        <a class="hover:text-white transition-colors" href="https://www.instagram.com/gyaragyara.india/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
-          <svg class="lucide lucide-instagram" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-          </svg>
-        </a>
-        <a class="hover:text-white transition-colors" href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn">
-          <svg class="lucide lucide-linkedin" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-            <rect height="12" width="4" x="2" y="9"></rect>
-            <circle cx="4" cy="4" r="2"></circle>
-          </svg>
-        </a>
+
+    <!-- Top Right Graphic -->
+    <div class="absolute top-[5%] right-0 translate-x-[68%] z-10 pointer-events-none select-none">
+
+      <img src="images/FooterGraphic3.svg" alt="" aria-hidden="true"
+        class="relative z-20 w-[60vh] md:w-[60vh] lg:w-[650px] opacity-80" />
+
+      <!-- Solid Circle -->
+      <div
+        class="absolute top-1/2 left-[2%]  -translate-y-[70%] w-[180px] h-[180px] md:w-[280px] md:h-[280px] lg:w-[360px] lg:h-[360px] rounded-full bg-white/50 opacity-70 z-10">
+      </div>
+
+    </div>
+
+    <div class="px-3 lg:px-8 text-3xl tracking-widest font-bold mb-16 max-w-7xl mx-auto">
+      <div class="w-full h-px bg-outline-variant mb-16 border-t border-gray-300"></div>
+      <img src="images/GyaraGyaraLogo2.svg" alt="Logo" width="200" height="200" class="relative mx-auto z-20">
+    </div>
+    <!-- Reusable Footer Component — Injected by critical.js -->
+    <div class="bg-primary text-white py-16 px-3 lg:px-8 relative " role="contentinfo">
+      <!-- Decorative background elements -->
+      <!-- Left Graphic -->
+
+      <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <h3 class="font-bodyPoppins text-2xl lg:text-3xl mb-16">How can we help? <br /> contact us anytime
+        </h3>
+        <div class="space-y-4 mb-24">
+          <p class="text-lg lg:text-2xl">Contact us on : <a href="tel:+918156087656"
+              class="hover:text-gray-300 transition-colors">+91
+              8156087656</a></p>
+          <p class="text-lg lg:text-2xl"><a href="mailto:hello11.11india@gmail.com"
+              class="hover:text-gray-300 transition-colors">hello11.11india@gmail.com</a></p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <a class="hover:text-white mb-4 md:mb-0 transition-colors" href="#">Terms and Condition</a>
+          <div class="flex items-center gap-4">
+            <span>Follow Us</span>
+            <a class="hover:text-white transition-colors" href="https://www.instagram.com/gyaragyara.india/"
+              target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+              <svg class="lucide lucide-instagram" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            <a class="hover:text-white transition-colors" href="#" target="_blank" rel="noopener noreferrer"
+              aria-label="Follow us on LinkedIn">
+              <svg class="lucide lucide-linkedin" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect height="12" width="4" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-</footer>
+  </footer>
 
   <script src="js/critical.js?v=4" defer></script>
   <script src="js/script.js?v=4" defer></script>

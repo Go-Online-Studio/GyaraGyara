@@ -286,6 +286,7 @@ h3,
 
 .mobileNav a{
   color: #555555;
+  font-family: 'Sentient', serif;;
 }
 @media (max-width: 767px) {
   .gg-hamburger {
