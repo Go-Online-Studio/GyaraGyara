@@ -95,6 +95,24 @@
     h3 {
       font-family: 'Sentient', serif;
     }
+
+    .insta-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.insta-pagination .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: #d1d5db;
+  opacity: 1;
+  margin: 0 4px !important;
+}
+
+.insta-pagination .swiper-pagination-bullet-active {
+  background: #1a2a40; /* Instagram blue */
+}
   </style>
   <!-- JSON-LD: Organization + WebSite -->
   <script type="application/ld+json">
@@ -314,10 +332,10 @@
         </button>
       </div>
       <div class="flex justify-center mt-12">
-        <svg class="w-8 h-8 text-on-surface" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+        <a href="shop_now.html" class="animate-bounce"><svg class="w-8 h-8 text-on-surface" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
           aria-hidden="true">
           <path d="m19.5 8.25-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+        </svg></a>
       </div>
       <div class="w-full h-px bg-outline-variant mt-8"></div>
     </section>
@@ -505,24 +523,24 @@
     <!-- END: CustomisationBanner -->
     <!-- BEGIN: ValuesSection -->
     <section class="pt-24 px-3 lg:px-8 max-w-7xl mx-auto text-center" data-purpose="values-section">
-      <div class="flex flex-wrap justify-center lg:justify-between gap-8  mb-16 lg:mb-24">
+      <div class="flex flex-wrap justify-center lg:justify-between gap-4 lg:gap-8  mb-16 lg:mb-24">
         <div
-          class="w-full md:flex-1 max-w-[160px] lg:max-w-[300px] border border-outline p-4 lg:p-6 rounded-xl flex aspect-[1/1] flex-col items-center justify-center min-h-[200px]">
+          class="md:flex-1 max-w-[30%] lg:max-w-[300px] border border-outline p-4 lg:p-6 rounded-xl flex aspect-[1/1] flex-col items-center justify-center">
           <img alt="Handcrafted icon" class="mb-4 lg:mb-8 max-w-[100%]" src="images/Pottery.svg" loading="lazy"
             width="180" height="180" />
-          <h4 class=" text-lg xl:text-xl font-medium">Handcrafted</h4>
+          <h4 class=" text-sm md:text-lg xl:text-xl font-medium">Handcrafted</h4>
         </div>
         <div
-          class="w-full md:flex-1 max-w-[160px] lg:max-w-[300px] border border-outline p-4 lg:p-6 rounded-xl flex aspect-[1/1] flex-col items-center justify-center min-h-[180px]">
+          class="md:flex-1 max-w-[30%] lg:max-w-[300px] border border-outline p-4 lg:p-6 rounded-xl flex aspect-[1/1] flex-col items-center justify-center">
           <img alt="Artisan icon" class="mb-4 lg:mb-8 max-w-[100%]" src="images/MapHouse.svg" loading="lazy" width="180"
             height="180" />
-          <h4 class=" text-lg xl:text-xl font-medium">Promoting<br />Local Artisans</h4>
+          <h4 class=" text-sm md:text-lg xl:text-xl font-medium">Promoting<br />Local Artisans</h4>
         </div>
         <div
-          class="w-full md:flex-1 max-w-[160px] lg:max-w-[300px] border border-outline p-4 lg:p-6 rounded-xl flex aspect-[1/1] flex-col items-center justify-center min-h-[200px]">
+          class="md:flex-1 max-w-[30%] lg:max-w-[300px] border border-outline p-4 lg:p-6 rounded-xl flex aspect-[1/1] flex-col items-center justify-center">
           <img alt="Map of India icon" class="mb-4 lg:mb-8 max-w-[100%]" src="images/IndiaMap.svg" loading="lazy"
             width="180" height="180" />
-          <h4 class=" text-lg xl:text-xl font-medium">Made in India</h4>
+          <h4 class=" text-sm md:text-lg xl:text-xl font-medium">Made in India</h4>
         </div>
       </div>
       <p class="text-lg md:text-xl max-w-6xl mx-auto mb-16 leading-relaxed text-gray-900">
@@ -587,7 +605,505 @@
 
         </div>
       </div>
-      <div class="w-full h-px bg-outline-variant mb-16"></div>
+
+      <div class="mb-16 py-12">
+  <div class="container mx-auto px-4">
+
+    <!-- Desktop Grid -->
+    <div class="hidden md:grid grid-cols-4 gap-3">
+      <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+        <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+        <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+        <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+        <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+        <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+        <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+        <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+        <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Swiper -->
+    <div class="md:hidden">
+      <div class="swiper instaSwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+              <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+              <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+              <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+              <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+              <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+              <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+              <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+              <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="aspect-[3/4] bg-gray-100 rounded-sm">
+              <a
+          href="https://www.instagram.com/reel/DSIbDXbiGWP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative block aspect-[3/4] overflow-hidden rounded-sm cursor-pointer"
+        >
+          <img
+            src="images/post1.webp"
+            alt=""
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          >
+
+          <!-- Instagram-style overlay -->
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <div class="flex items-center gap-8 text-white font-semibold">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M471.383 44.578C444.879 15.832 408.512 0 368.973 0c-29.555 0-56.621 9.344-80.45 27.77C276.5 37.07 265.605 48.45 256 61.73c-9.602-13.277-20.5-24.66-32.527-33.96C199.648 9.344 172.582 0 143.027 0c-39.539 0-75.91 15.832-102.414 44.578C14.426 72.988 0 111.801 0 153.871c0 43.3 16.137 82.938 50.781 124.742 30.992 37.395 75.535 75.356 127.117 119.313 17.614 15.012 37.579 32.027 58.309 50.152A30.023 30.023 0 0 0 256 455.516c7.285 0 14.316-2.641 19.785-7.43 20.73-18.129 40.707-35.152 58.328-50.172 51.575-43.95 96.117-81.906 127.11-119.305C495.867 236.81 512 197.172 512 153.867c0-42.066-14.426-80.879-40.617-109.289zm0 0" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>58</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 1a10.995 10.995 0 0 0-9.464 16.6l-1.475 4.058A1 1 0 0 0 2 23a1.019 1.019 0 0 0 .342-.06L6.4 21.464A11 11 0 1 0 12 1z" data-name="Layer 2" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg> <span>4</span>
+              </div>
+            </div>
+          </div>
+        </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Swipe Indicator -->
+      <div class="insta-pagination mt-4"></div>
+    </div>
+<div class="flex justify-center mt-12">
+        <a target="_blank" href="https://www.instagram.com/gyaragyara_india/" class="animate-bounce"><svg class="w-8 h-8 text-on-surface" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path d="m19.5 8.25-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg></a>
+      </div>
+  </div>
+</div>
+
+
     </section>
     <!-- END: ValuesSection -->
   </main>
@@ -624,7 +1140,7 @@
       <!-- Left Graphic -->
 
       <div class="max-w-4xl mx-auto relative z-10 text-center">
-        <h3 class="font-bodyPoppins text-2xl font-medium lg:text-3xl mb-16">How can we help? <br /> contact us anytime
+        <h3 class="font-bodyPoppins text-2xl lg:text-3xl mb-16">How can we help? <br /> contact us anytime
         </h3>
         <div class="space-y-4 mb-24">
           <p class="text-lg lg:text-2xl">Contact us on : <a href="tel:+918156087656"
@@ -671,20 +1187,42 @@
   <script src="js/script.js?v=4" defer></script>
 
   <script>
-    const instagramData = {
-      username: "gyaragyara_india",
-      name: "Gyara Gyara",
-      followers: 927,
-      posts: 272,
-      avatar: "images/instaProfile.webp"
-    };
+document.addEventListener("DOMContentLoaded", () => {
 
-    document.getElementById("insta-username").textContent = instagramData.username;
-    document.getElementById("insta-name").textContent = instagramData.name;
-    document.getElementById("insta-followers").textContent = instagramData.followers.toLocaleString();
-    document.getElementById("insta-posts").textContent = instagramData.posts.toLocaleString();
-    document.getElementById("insta-avatar").src = instagramData.avatar;
-  </script>
+  const instagramData = {
+    username: "gyaragyara_india",
+    name: "Gyara Gyara",
+    followers: 927,
+    posts: 272,
+    avatar: "images/instaProfile.webp"
+  };
+
+  // Populate profile data
+  document.getElementById("insta-username").textContent = instagramData.username;
+  document.getElementById("insta-name").textContent = instagramData.name;
+  document.getElementById("insta-followers").textContent = instagramData.followers.toLocaleString();
+  document.getElementById("insta-posts").textContent = instagramData.posts.toLocaleString();
+  document.getElementById("insta-avatar").src = instagramData.avatar;
+
+  // Initialize Swiper
+  const instaSwiper = new Swiper(".instaSwiper", {
+    slidesPerView: 1.2,
+    spaceBetween: 12,
+
+    pagination: {
+      el: ".insta-pagination",
+      clickable: true,
+    },
+
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      }
+    }
+  });
+
+});
+</script>
 </body>
 
 </html>
