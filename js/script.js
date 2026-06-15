@@ -246,7 +246,7 @@
         <button aria-label="${isWished ? "Remove from" : "Add to"} favorites" class="absolute top-6 right-6 z-10 text-on-surface-variant hover:text-red-500 transition-colors bg-white/50 rounded-full p-1.5 ${isWished ? "gg-heart-active" : ""}" data-wishlist-btn="${product.id}">
           <svg class="w-5 h-5" fill="${isWished ? "currentColor" : "none"}" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
         </button>
-        <a href="${detailPage}?slug=${product.slug}" class="product-stage aspect-[4/5] !pb-0 p-2 lg:p-3 w-full bg-[#ebebed] overflow-hidden rounded-t-[7px]">
+        <a href="${detailPage}?slug=${product.slug}" class="product-stage aspect-[4/5] !pb-0 p-2 lg:p-3 w-full overflow-hidden rounded-t-[7px]">
 
           <!-- Fixed Stage Background -->
           <img
