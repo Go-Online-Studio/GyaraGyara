@@ -246,8 +246,26 @@
         <button aria-label="${isWished ? "Remove from" : "Add to"} favorites" class="absolute top-6 right-6 z-10 text-on-surface-variant hover:text-red-500 transition-colors bg-white/50 rounded-full p-1.5 ${isWished ? "gg-heart-active" : ""}" data-wishlist-btn="${product.id}">
           <svg class="w-5 h-5" fill="${isWished ? "currentColor" : "none"}" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
         </button>
-        <a href="${detailPage}?slug=${product.slug}" class="aspect-[4/5] !pb-0 p-2 lg:p-3 w-full bg-[#ebebed] overflow-hidden rounded-t-[7px]">
-          <img alt="${product.name}" class="w-full h-full object-cover object-center rounded-t-[7px] group-hover:scale-105 transition-transform duration-500" loading="lazy" src="${product.image}" width="300" height="375"/>
+        <a href="${detailPage}?slug=${product.slug}" class="product-stage aspect-[4/5] !pb-0 p-2 lg:p-3 w-full bg-[#ebebed] overflow-hidden rounded-t-[7px]">
+
+          <!-- Fixed Stage Background -->
+          <img
+            src="images/backProduct.webp"
+            alt=""
+            class="stage-bg"
+          />
+          <!-- Floating Shadow -->
+          <span class="vase-shadow"></span>
+
+          <!-- Product Vase -->
+          <img
+            alt="${product.name}"
+            class="vase-img"
+            loading="lazy"
+            src="${product.image}"
+            width="300"
+            height="375"
+          />
         </a>
         <div class="p-4 flex flex-col flex-grow">
           <a href="${detailPage}?slug=${product.slug}" class="text-lg text-on-surface mb-1 hover:underline">${product.name}</a>
@@ -441,12 +459,12 @@
           <img alt="${item.name}" class="w-full h-full object-cover" src="${item.image}" width="128" height="128" loading="lazy"/>
         </div>
         <div class="flex-grow">
-          <h3 class="text-lg font-medium">${item.name}</h3>
+          <h3 class="text-lg font-medium font-bodyPoppins">${item.name}</h3>
           <p class="font-bold text-lg mt-1">${item.currency}${item.price}</p>
           <div class="flex items-center space-x-4 mt-4">
-            <div class="flex border border-gray-300 rounded overflow-hidden w-24">
+            <div class="flex border border-gray-700 rounded overflow-hidden">
               <button class="px-3 py-1 hover:bg-gray-100 border-r border-gray-300 focus:outline-none" data-checkout-minus="${item.id}">-</button>
-              <input class="w-full text-center py-1 border-none focus:ring-0 text-sm" readonly type="text" value="${item.qty}" data-checkout-qty="${item.id}"/>
+              <input class="max-w-10 text-center py-1 border-none focus:ring-0 text-sm" readonly type="text" value="${item.qty}" data-checkout-qty="${item.id}"/>
               <button class="px-3 py-1 hover:bg-gray-100 border-l border-gray-300 focus:outline-none" data-checkout-plus="${item.id}">+</button>
             </div>
             <button aria-label="Remove item" class="text-gray-500 hover:text-red-500 transition-colors focus:outline-none" data-checkout-remove="${item.id}">
