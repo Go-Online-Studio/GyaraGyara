@@ -243,8 +243,12 @@ left: -23%;
   transition: transform 0.5s ease;
 }
 .gg-img-zoom:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-50%);
 }
+
+/* .descriptionPage .gg-img-zoom:hover img {
+  transform: scale(1.05) translateY(-50%);
+} */
 
 /* --- Form Validation --- */
 .gg-field-error {
