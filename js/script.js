@@ -663,6 +663,7 @@
     }
   }
 
+
   // ==========================================
   // WISHLIST — DYNAMIC RENDERING
   // ==========================================
@@ -680,7 +681,18 @@
     container.innerHTML = wishlist
       .map((p) => createShopProductCard(p))
       .join("");
+    
     bindCardEvents(container);
+
+    // Initialize Vanilla-Tilt on the newly generated wishlist cards
+    if (typeof VanillaTilt !== "undefined") {
+      VanillaTilt.init(container.querySelectorAll("[data-tilt]"), {
+        max: 15,
+        speed: 400,
+        glare: false,
+        "full-page-listening": false
+      });
+    }
   }
 
   // ==========================================
