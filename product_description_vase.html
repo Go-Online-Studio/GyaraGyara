@@ -17,6 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script>
@@ -56,6 +58,147 @@
       color: theme('colors.textMain');
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+    }
+    .swiper-pagination-bullet-active{
+      background: var(--gg-surface) !important;
+      outline: 1px solid black !important;
+    }
+    .linedecor1{
+      position: relative;
+    }
+    .linedecor2{
+      width: calc(40% + 56px);
+      position: relative;
+    }
+    .linedecor3{
+      position: relative;
+    }
+    .linedecor1::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 64%;
+      height: 70%;
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+    }
+    .linedecor2::after{
+      content: '';
+      position: absolute;
+      top: 15%;
+      right: 100%;
+      width: calc(100% - 46px);
+      height: 70%;
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+    }
+    .linedecor3::after{
+      content: '';
+      position: absolute;
+      bottom: -64px;
+      left: 0%;
+      width: 64%;
+      height: 90%;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+    }
+
+    @media (max-width: 767.9px) {
+    .linedecor2{
+      width: calc(40% + 34px);
+      position: relative;
+    }
+    
+    .linedecor2::after{
+      content: '';
+      position: absolute;
+      top: 15%;
+      right: 100%;
+      width: calc(100% - 34px);
+      height: 70%;
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+    }
+    .linedecor3::after{
+      content: '';
+      position: absolute;
+      bottom: -24px;
+      left: 0%;
+      width: 64%;
+      height: 90%;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black; 
+    }
+    }
+
+    /* ── Product Gallery Swiper ─────────────────────────── */
+    .product-gallery-main .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+    .product-gallery-main .swiper-slide img {
+      width: 75%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .product-gallery-thumbs .swiper-slide {
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      overflow: hidden;
+      opacity: 0.55;
+      transition: opacity 0.2s, border-color 0.2s;
+      background: #fff;
+    }
+    .product-gallery-thumbs .swiper-slide-thumb-active {
+      opacity: 1;
+      border-color: #1a2a40;
+    }
+    .product-gallery-thumbs .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 4px;
+    }
+    /* swiper nav arrows */
+    .gallery-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 20;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid #e5e5e5;
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    }
+    .gallery-btn:hover { background: #fff; }
+    .gallery-btn-prev { left: 8px; }
+    .gallery-btn-next { right: 8px; }
+    /* highlights list */
+    .product-highlights li {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 0.97rem;
+      line-height: 1.55;
+      padding: 4px 0;
+    }
+    .product-highlights li::before {
+      content: "✦";
+      flex-shrink: 0;
+      margin-top: 2px;
+      font-size: 0.7rem;
+      color: #8a7160;
     }
   </style>
 </head>
@@ -181,19 +324,50 @@
   <main id="page-content" class="flex-grow descriptionPage">
     <!-- BEGIN: Product Overview Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16">
-      <!-- Left: Product Image & Short Description -->
-      <div class="space-y-12">
-        <div class="aspect-square rounded overflow-hidden gg-img-zoom">
-          <img alt="Sandel Vase" class="w-[75%] m-auto object-cover relative top-1/2 -translate-y-1/2" id="product-image"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUftZIrL6wyDaeAu63mT1u-WUot-dB1AM7dSvmhqqrsGHypezc0Esq_I2M_XZPTEsNDg-w6bap4AWvyxwrCVFwLA0bE3DeIPcVJ69ys1fB-unf82oaPqmsZrz5eM0wdPCFuUHNsTnn6_2kBcjTgmOTsPnRxWinW15Jv8PvAL7nkJEUU1FJke6VBjpzjbeXIcdRgeB39IGcHJFU68KALp3Z2cNYtLyPTSZywj8nknFjLQ06AfQe4Dpmf5CSlGcTwSS41vfUUG7NmZi3"
-            fetchpriority="high" width="600" height="600" />
+      <!-- Left: Product Image Gallery & Short Description (Desktop) -->
+      <div class="space-y-6">
+
+        <!-- ── Main Swiper ───────────────────────────────── -->
+        <div class="relative rounded overflow-hidden bg-white" style="aspect-ratio:1/1;">
+          <div class="swiper product-gallery-main h-full" id="product-gallery-main">
+            <div class="swiper-wrapper" id="gallery-slides">
+              <!-- slides injected by JS -->
+              <div class="swiper-slide">
+                <img alt="Sandel Vase" id="product-image"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUftZIrL6wyDaeAu63mT1u-WUot-dB1AM7dSvmhqqrsGHypezc0Esq_I2M_XZPTEsNDg-w6bap4AWvyxwrCVFwLA0bE3DeIPcVJ69ys1fB-unf82oaPqmsZrz5eM0wdPCFuUHNsTnn6_2kBcjTgmOTsPnRxWinW15Jv8PvAL7nkJEUU1FJke6VBjpzjbeXIcdRgeB39IGcHJFU68KALp3Z2cNYtLyPTSZywj8nknFjLQ06AfQe4Dpmf5CSlGcTwSS41vfUUG7NmZi3"
+                  fetchpriority="high" width="600" height="600" style="width:75%;height:100%;object-fit:contain;" />
+              </div>
+            </div>
+            <!-- prev / next arrows -->
+            <button class="gallery-btn gallery-btn-prev" id="gallery-prev" aria-label="Previous image">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="gallery-btn gallery-btn-next" id="gallery-next" aria-label="Next image">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+            <!-- pagination dots -->
+            <div class="swiper-pagination" id="gallery-pagination" style="bottom:10px;"></div>
+          </div>
         </div>
-        <div class="max-w-md">
+
+        <!-- ── Thumbnail Swiper ──────────────────────────── -->
+        <div class="swiper product-gallery-thumbs" id="product-gallery-thumbs" style="height:72px;">
+          <div class="swiper-wrapper" id="gallery-thumb-slides">
+            <!-- thumb slides injected by JS -->
+          </div>
+        </div>
+
+        <!-- ── Description block — DESKTOP only (hidden on mobile) ── -->
+        <div class="max-w-md hidden lg:block">
           <h2 class="text-2xl font-semibold mb-4">Description</h2>
-          <p class="text-2xl leading-relaxed" id="product-description">
+          <p class="text-xl leading-relaxed" id="product-description">
             A sculptural vase with a curvy, double gourd silhouette, showcasing a warm natural grain. The concentric
             ring enhances its organic charm.
           </p>
+
+          <!-- Highlights -->
+          <ul class="product-highlights mt-6 space-y-1" id="product-highlights-desktop"></ul>
+
           <hr class="mt-8 border-1 border-gray-700" />
         </div>
       </div>
@@ -239,6 +413,20 @@
     </div>
 
   </div>
+</div>
+
+<!-- ── Description block — MOBILE only (block on small, hidden on lg+) ── -->
+<div class="max-w-md block lg:hidden mt-12">
+  <h2 class="text-2xl font-semibold mb-4">Description</h2>
+  <p class="text-xl leading-relaxed" id="product-description-mobile">
+    A sculptural vase with a curvy, double gourd silhouette, showcasing a warm natural grain. The concentric
+    ring enhances its organic charm.
+  </p>
+
+  <!-- Mobile Highlights -->
+  <ul class="product-highlights mt-6 space-y-1" id="product-highlights-mobile"></ul>
+
+  <hr class="mt-6 border-gray-300" />
 </div>
 
         <!-- Action Buttons -->
@@ -294,32 +482,33 @@
         <!-- Main Image -->
         <div class="relative w-full sm:w-[80%] mx-auto lg:w-[72%] z-10" style="isolation: isolate;">
             <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNUAWd274eAi_TbpuXohdphEvvsS1NvTuzpu2EMwW2wr4mfsKeS8df93D28LDnKWXOXHkPob3ywTkQWGfaPO365slfOT_bE3qwUatGOp_h5ZylR4OQ9zlFTjfqPGxHjIdbrVSz0vafmLVfVPVwyypitqvEoJNyLEYA9AL8mCS4ECDlp-a-qI8vWcenY86ZimMBrMRoipflspMu2nAC3uWuzh3Zt1pmM-qi1cFLf98gu32EQxWjhcIWXF9tzRUOF0KRvLQlizyORgJj"
+                id="about-product-img"
+                src="images/BreathingSpaceImg0.webp"
                 alt="Wood Vase"
                 class="w-full object-cover -z-10 relative"
             >
 
             <!-- Mobile Text Card -->
             <div class="lg:hidden absolute left-0 bottom-0 w-[64%] bg-[#d9d9d9b3] p-6 !pb-20">
-                <p class="text-sm sm:text-[18px] leading-[1.5] tracking-wide">
+                <p class="text-sm sm:text-[18px] leading-[1.5] tracking-wide" id="about-texture-copy-mobile">
                     Finished to a smooth luster that highlights the unique knots and "fingerprints" of the wood.
                 </p>
             </div>
 
             <!-- Texture Label -->
             <div class="absolute bottom-0 right-0 lg:translate-x-[20%] bg-black/45 backdrop-blur-sm px-8 py-5 lg:px-14 lg:py-8 z-20">
-                <h3 class="text-white text-3xl lg:text-5xl tracking-wide">
+                <h3 class="text-white text-3xl lg:text-5xl tracking-wide" id="about-texture-label">
                     Tactile Texture
                 </h3>
             </div>
 
-            <p class="hidden lg:block absolute right-0 translate-x-[90%] bottom-0 w-[64%] leading-[1.6] tracking-wide max-w-sm bg-[#d9d9d9b3] pt-16 px-12 pb-28 text-xl xl:text-2xl">
+            <p class="hidden lg:block absolute right-0 translate-x-[90%] bottom-0 w-[64%] leading-[1.6] tracking-wide max-w-sm bg-[#d9d9d9b3] pt-16 px-12 pb-28 text-xl xl:text-2xl" id="about-texture-copy-desktop">
               Finished to a smooth luster that highlights the unique knots and "fingerprints" of the wood.
             </p>
         </div>
 
         <!-- Desktop Text Card -->
-        <div class="hidden lg:flex flex-col justify-between" > 
+        <div class="hidden lg:flex flex-col justify-between grow" > 
           <!-- Vase Line Art (Desktop Only) -->
           <div class="hidden lg:block relative z-10">   
               <img alt="Vase Line Art" class="w-2/3 w-[80%] -mt-[20%]" src="images/categoryGraphics1.svg" loading="lazy" width="500" height="500">
@@ -331,37 +520,34 @@
   </div>
     </section>
     <!-- END: About The Product Section -->
-    <!-- BEGIN: Breathing Space Section -->
-    <section class="bg-surface py-24 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl font-bold mb-16 tracking-tight">Breathing Space</h2>
-        <div class="mb-16">
-          <img alt="Vase in living room setting" class="w-full h-auto object-cover rounded shadow-sm"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmZH23fESftC2A3khyBYpx6_YARem1vlGhVmZzVrhQYpb1kzkzPdlhH21iFpLRHT9bAcC66bYy5i5FrkUv5PiRwq5iV4UZ02SZeRqsM5m3oUdjaQRwNeNMqCC-lf62KICItBGszA3bOFbxWzZHFX3wiPiH3o0Kx2IUyWppgAjY4JJ2ePDwm4gnjZwwuVjvUYpJ4U8IMQtwQeGKLJ3Wm7p8r7GrQv5zYWZMNZMoFKQrwne6s6Q8mf8oRzOSMSNCo-_jlWS9xdBr9yCT"
-            loading="lazy" width="1200" height="600" />
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 relative">
-          <div class="absolute inset-0 pointer-events-none hidden lg:block" aria-hidden="true">
-            <div class="border-t-2 border-r-2 border-black w-1/4 h-64 absolute top-0 right-10"></div>
-            <div class="border-b-2 border-l-2 border-black w-1/4 h-64 absolute bottom-20 left-10"></div>
-          </div>
-          <div class="space-y-12 md:mt-24 relative z-10">
-            <img alt="Vase detail view" class="w-full h-auto object-cover rounded shadow-sm"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuALxDmZRtNp_H0Icx5yEenZkESpnbquiIXhdZa4AJUhy523at7gRIGLzygwF0wM_xO58RUWs6BTGsTDuxYSpZc66XVboZjyMt_6LxziSsxL2wdXV1x1vv5VJv5P0N62Z8G1BbvU8ODdxBUb4iB3IT6LoKMktrATh3IJJEusUyMEfLwa9f3iFA1JhptUTUDOyoJK2STmHiCfCtbF5J-VG2F8TF3Z6lCCs-4hiIuB-XDuv6xMWVfnhQSQB6Ay6AxunNtqmVnSQ7l6874k"
-              loading="lazy" width="500" height="400" />
-            <img alt="Close up of vase rim" class="w-3/4 ml-auto h-auto object-cover rounded shadow-sm"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_ojuMgGaMJeWwJxT4CtUHfj9IJCQr2WCl-Q38CfzeS_uPD_OE-Qn7vdkvpIDuseLwc801rPTCfaCTBUFonZ-gvzvse3Ssl1x7YvKDy-W6kOuOXw7gAZFOgDtKdwoBTsFqpv9C0M05qLaoHtu55eEeXFo1Qm7MZWxBlU1c12tVD6cIYaQNJPmblLCmeBTvYRVg6QWaawjM-vpUwwfXxqny0dXSKvHURRhKWMyAGbLNoMSSmngyTriBXf3I0CVv1h2Uww3RynWHl9U2"
-              loading="lazy" width="375" height="300" />
-          </div>
-          <div class="space-y-12 relative z-10">
-            <div class="h-48 md:h-64"></div>
-            <img alt="Vase wide detail" class="w-full h-auto object-cover rounded shadow-sm"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSokKSMuooWZQQ24NIfym4ukCmmj3LWaGXcryR1IKneE3u4yMIMSVd4K2HeU9eANG-OH9tUr6smcrB2mf0C8jp9AThVUfFYyWKdPjtGOSGV8GbJslxzNVXNC4aF67OyNk0_45kDjaNY_dpdlWNjBH75RhmnmmpDEECtOQgfzxN2ynki31wk9irCDziw06TJ_N2nKZyijmf-9nJemzZoJmKbSylQGGfDYHpRrgjs4T75x9EBvESG8yyCzU4uoQOgCF0wK4sY-JjvDa6"
-              loading="lazy" width="500" height="400" />
-          </div>
+    <!-- BEGIN: Breathing Space Section --> 
+    <section class="bg-[#f3ebd8] py-20 px-4 sm:px-6 lg:px-8 text-[#1a1a1a]">
+  <div class="max-w-7xl mx-auto font-serif">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 tracking-wide">Breathing Space</h2>
+
+    <div class="mb-16">
+      <img id="bs-img-1" alt="Vase in living room setting" class="w-full h-auto object-cover"
+        src="images/BreathingSpaceImg1.webp" loading="lazy" />
+    </div>
+
+      <div class="flex items-center mb-4 lg:mb-8"> 
+           <div class="w-[60%] pe-6 lg:pe-12 linedecor1">
+             <img id="bs-img-2" class="w-full" alt="Vase detail view" src="images/BreathingSpaceImg2.webp" loading="lazy" /> 
+             </div>
+      </div>
+      <div class="flex items-center justify-end mb-4 lg:mb-8"> 
+        <div class="ps-6 lg:ps-12 linedecor2">
+          <img id="bs-img-3" class="w-full" alt="Vase detail view" src="images/BreathingSpaceImg3.webp" loading="lazy" /> 
         </div>
       </div>
-    </section>
+      <div class="flex items-center mb-4 lg:mb-8"> 
+           <div class="w-[60%] ps-6 pe-6 lg:ps-12 lg:pe-12 linedecor3 mb-6 lg:mb-16">
+             <img id="bs-img-4" class="w-full" alt="Vase detail view" src="images/BreathingSpaceImg4.webp" loading="lazy" /> 
+             </div>
+      </div>
+
+  </div>
+</section>
     <!-- END: Breathing Space Section -->
   </main>
 
@@ -437,6 +623,7 @@
 
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/critical.js?v=4" defer></script>
   <script src="js/script.js?v=4" defer></script>
 </body>

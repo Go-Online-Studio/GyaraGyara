@@ -310,35 +310,125 @@
     const product = products.find((p) => p.slug === slug);
     if (!product) return;
 
-    // Update page title
+    // Update page title & meta
     document.title = `${product.name} - Gyara Gyara`;
 
-    // Populate product details
+    // ── Core fields ──────────────────────────────────────────
     const nameEl = $("#product-name");
     const priceEl = $("#product-price");
-    const descEl = $("#product-description");
-    const imgEl = $("#product-image");
     const artistEl = $("#product-artist");
 
     if (nameEl) nameEl.textContent = product.name;
     if (priceEl) priceEl.textContent = `${product.currency}${product.price}`;
-    if (descEl) descEl.textContent = product.description;
-    if (imgEl) {
-      imgEl.src = product.image;
-      imgEl.alt = product.name;
-    }
     if (artistEl) artistEl.textContent = product.artist;
 
-    // Populate specs
+    // ── Description (desktop copy + mobile copy) ─────────────
+    const descDesktop = $("#product-description");
+    const descMobile  = $("#product-description-mobile");
+    if (descDesktop) descDesktop.textContent = product.description;
+    if (descMobile)  descMobile.textContent  = product.description;
+    // legacy single-id fallback (other pages)
+    $$("#product-description").forEach(el => el.textContent = product.description);
+
+    // ── Highlights ───────────────────────────────────────────
+    function buildHighlights(container, items) {
+      if (!container || !items || !items.length) return;
+      container.innerHTML = items
+        .map(h => `<li>${h}</li>`)
+        .join("");
+    }
+    buildHighlights($("#product-highlights-desktop"), product.highlights);
+    buildHighlights($("#product-highlights-mobile"),  product.highlights);
+
+    // ── Specs grid ───────────────────────────────────────────────────
     if (product.specs) {
-      const specEntries = Object.entries(product.specs);
-      specEntries.forEach(([key, value]) => {
+      Object.entries(product.specs).forEach(([key, value]) => {
         const el = $(`[data-spec="${key}"]`);
         if (el) el.textContent = value;
       });
     }
 
-    // JSON-LD for product
+    // ── Gallery / Swiper ────────────────────────────────────
+    // Build gallery array: prefer product.gallery, fall back to image + detailImages
+    const galleryImages = (product.gallery && product.gallery.length)
+      ? product.gallery
+      : [product.image, ...(product.detailImages || [])].filter(Boolean);
+
+    const mainWrapper  = $("#gallery-slides");
+    const thumbWrapper = $("#gallery-thumb-slides");
+
+    if (mainWrapper && galleryImages.length) {
+      // Build main slides
+      mainWrapper.innerHTML = galleryImages.map((src, i) => `
+        <div class="swiper-slide">
+          <img src="${src}" alt="${product.name} – view ${i + 1}"
+               width="600" height="600"
+               ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'}
+               style="width:84%;height:auto; aspect-ratio: 3/4; object-fit:cover;" />
+        </div>`).join("");
+
+      // Build thumb slides
+      if (thumbWrapper) {
+        thumbWrapper.innerHTML = galleryImages.map((src, i) => `
+          <div class="swiper-slide" style="width:68px;">
+            <img src="${src}" alt="Thumb ${i + 1}" loading="lazy" width="68" height="68" />
+          </div>`).join("");
+      }
+
+      // Init Swiper (Swiper is loaded before this script, no defer needed)
+      if (typeof Swiper !== "undefined") {
+        const thumbSwiper = new Swiper("#product-gallery-thumbs", {
+          slidesPerView: "auto",
+          spaceBetween: 8,
+          watchSlidesProgress: true,
+          freeMode: true,
+        });
+
+        new Swiper("#product-gallery-main", {
+          loop: galleryImages.length > 1,
+          grabCursor: true,
+          keyboard: { enabled: true },
+          pagination: {
+            el: "#gallery-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: "#gallery-next",
+            prevEl: "#gallery-prev",
+          },
+          thumbs: {
+            swiper: thumbSwiper,
+          },
+        });
+      }
+    }
+
+    // Keep legacy #product-image in sync (used by other parts / SEO)
+    const imgEl = $("#product-image");
+    if (imgEl) { imgEl.src = product.image; imgEl.alt = product.name; }
+
+    // ── About The Product section ────────────────────────────
+    const aboutImg = $("#about-product-img");
+    if (aboutImg && product.aboutImage) {
+      aboutImg.src = product.aboutImage;
+      aboutImg.alt = product.name;
+    }
+    const aboutLabel = $("#about-texture-label");
+    if (aboutLabel && product.aboutTextureLabel) aboutLabel.textContent = product.aboutTextureLabel;
+    const aboutCopyDesktop = $("#about-texture-copy-desktop");
+    if (aboutCopyDesktop && product.aboutTextureCopy) aboutCopyDesktop.textContent = product.aboutTextureCopy;
+    const aboutCopyMobile = $("#about-texture-copy-mobile");
+    if (aboutCopyMobile && product.aboutTextureCopy) aboutCopyMobile.textContent = product.aboutTextureCopy;
+
+    // ── Breathing Space images ───────────────────────────────
+    if (product.breathingSpaceImages && product.breathingSpaceImages.length) {
+      product.breathingSpaceImages.forEach((src, i) => {
+        const el = $("#bs-img-" + (i + 1));
+        if (el) { el.src = src; el.alt = `${product.name} – space view ${i + 1}`; }
+      });
+    }
+
+    // ── JSON-LD ──────────────────────────────────────────────
     const jsonLd = {
       "@context": "https://schema.org",
       "@type": "Product",
