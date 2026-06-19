@@ -364,7 +364,7 @@
           <img src="${src}" alt="${product.name} – view ${i + 1}"
                width="600" height="600"
                ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'}
-               style="width:84%;height:auto; aspect-ratio: 3/4; object-fit:cover;" />
+               style="width:84%;height:auto; aspect-ratio: 1/1; object-fit:cover;" />
         </div>`).join("");
 
       // Build thumb slides

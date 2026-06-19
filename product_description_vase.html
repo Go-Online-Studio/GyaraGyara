@@ -27,12 +27,9 @@
         extend: {
           colors: {
             brand: '#1a2a40',
-            background: '#fcfaf6',
-            surface: '#FFF7EA',
             textMain: '#2d2d2d',
             textMuted: '#6b6b6b',
-            border: '#e5e5e5',
-            primary: '#1a2a40',
+            border: '#e5e5e5'
           },
           fontFamily: {
             serif: ['Poppins', 'sans-serif'],
@@ -53,15 +50,19 @@
   <link rel="stylesheet" href="css/style.css" />
   <style data-purpose="base-styles">
     body {
-      font-family: 'Newsreader', serif;
-      background-color: theme('colors.background');
-      color: theme('colors.textMain');
+      background-color: var(--gg-surface);
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      -moz-osx-font-smoothing: grayscale; 
     }
     .swiper-pagination-bullet-active{
       background: var(--gg-surface) !important;
       outline: 1px solid black !important;
+    }
+    .swiper-pagination-bullet{
+      outline: 1px solid rgba(255, 255, 255, 0.466);
+    }
+    .gallery-btn{
+      outline: 1px solid rgba(0, 0, 0, 0.363) !important;
     }
     .linedecor1{
       position: relative;
@@ -323,7 +324,7 @@
 
   <main id="page-content" class="flex-grow descriptionPage">
     <!-- BEGIN: Product Overview Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 items-start grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
       <!-- Left: Product Image Gallery & Short Description (Desktop) -->
       <div class="space-y-6">
 
@@ -372,7 +373,10 @@
         </div>
       </div>
       <!-- Right: Product Details & Actions -->
-      <div class="flex flex-col pt-8 lg:pt-0">
+      <div class="flex
+      
+      
+      flex-col pt-8 lg:pt-0 lg:sticky lg:top-[110px] lg:self-start">
         <h1 class="text-4xl md:text-5xl mb-4 font-bodyPoppins" id="product-name">Sandel Vase</h1>
         <p class="text-4xl lg:text-5xl font-semibold mb-12 font-bodyPoppins" id="product-price">$69.99</p>
         <!-- Specifications Grid -->
@@ -396,8 +400,7 @@
     </div>
 
     <!-- Right Column: Dimensions -->
-    <div class="space-y-6 sm:
-    pl-3 lg:pl-12 sm:border-l sm:border-gray-300">
+    <div class="space-y-6 sm:pl-3 lg:pl-12 sm:border-l sm:border-gray-300">
       <div class="flex items-center">
         <span class="text-gray-800 font-normal w-24 font-bodyPoppins">Length:</span>
         <span class="font-medium text-black w-16 font-bodyPoppins" data-spec="length">15 in</span>
@@ -521,7 +524,7 @@
     </section>
     <!-- END: About The Product Section -->
     <!-- BEGIN: Breathing Space Section --> 
-    <section class="bg-[#f3ebd8] py-20 px-4 sm:px-6 lg:px-8 text-[#1a1a1a]">
+    <section class="bg-[--gg-cardBack] py-20 px-4 sm:px-6 lg:px-8 text-[#1a1a1a]">
   <div class="max-w-7xl mx-auto font-serif">
     <h2 class="text-3xl md:text-4xl font-bold mb-10 tracking-wide">Breathing Space</h2>
 
